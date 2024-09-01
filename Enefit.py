@@ -422,5 +422,8 @@ with open(file_n,'w',newline='') as file:
     for row_id_val, data_block_id_val, target_val in zip(row_id,data_block_id,target):
         csv_w.writerow([row_id_val, data_block_id_val, target_val ])
 
-joblib.dump(Model_xgb,r'C:\Users\ArtisusXiren\Desktop\predict-energy-behavior-of-prosumers\Enefit\myapp\xgb_model.pkl')
-joblib.dump(Model,r'C:\Users\ArtisusXiren\Desktop\predict-energy-behavior-of-prosumers\Enefit\myapp\random.pkl')
+path=(r'C:\Users\ArtisusXiren\Desktop\predict-energy-behavior-of-prosumers\Enefit\myapp')
+xgb_path=os.path.join(path,'xgb_model.pkl')
+joblib.dump(Model_xgb,xgb_path)
+random_path=os.path.join(path,'random.pkl')
+joblib.dump(Model,random_path)
