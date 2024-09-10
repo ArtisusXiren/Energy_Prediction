@@ -4,3 +4,4 @@ scipy
 scikit-learn
 xgboost
 joblib
+Django>=3.2
